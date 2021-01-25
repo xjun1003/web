@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <script>
+
+        //页面加载完成事件 如果script标签鞋子啊元素下面,则不需要此事件
+        onload = function () {
+            d1.innerText = "内容被修改了";
+        }
+    </script>
+</head>
+<body>
+<div id="d1">这是div</div>
+<select id="s1" onchange="changefn()">
+    <option value="bj">北京</option>
+    <option value="sh">上海</option>
+    <option value="gz">广州</option>
+</select>
+<input type="text" onblur="blurfn()" id="i1">
+<span id="myspan"></span>
+<script>
+    function changefn() {
+        //当值发生改变时弹出下拉选的值
+        // let s1 = document.getElementById("s1")
+        alert(s1.value);
+    }
+    function blurfn() {
+        if (i1.value=="tom"){
+            myspan.innerText = "用户名已存在"
+        }else {
+            myspan.innerText = "用户名可用"
+        }
+    }
+</script>
+</body>
+</html>

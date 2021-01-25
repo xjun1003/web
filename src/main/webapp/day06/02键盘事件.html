@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<input id="i2" type="text" value="" placeholder="请输入密码" onkeyup="upfn()" onkeydown="downfn()">
+<p id="i1">请输入6位数密码</p>
+<script>
+    function upfn() {
+        //把按键编码转成字符
+        let char = String.fromCharCode(event.keyCode)
+        console.log("键盘抬起"+char)
+
+
+
+    }
+    function downfn() {
+         console.log("键盘按下"+event.keyCode)
+        if (event.keyCode==13){
+            console.log("用户按下了回车键")
+        }
+        let i = document.getElementById("i2")
+        let text = i.value;
+        console.log(text.length);
+        if (text.length>6){
+            let p1 = document.getElementById("i1")
+            p1.innerText="输入错误"
+            return;
+        }
+
+    }
+</script>
+</body>
+</html>

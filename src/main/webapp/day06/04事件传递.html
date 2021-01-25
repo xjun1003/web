@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <style>
+        *{
+            border: 1px solid red;
+        }
+    </style>
+</head>
+<body>
+<div onclick="alert('div')">
+    <p onclick="alert('p')">
+        <input type="button" value="按钮" onclick="alert('按钮')">
+    </p>
+</div>
+<input type="button" value="事件属性绑定" onclick="alert('事件属性绑定成功!')">
+<input type="button" value="动态绑定" id="btn">
+<script>
+    //动态绑定,因为动态绑定可以将html代码和js代码分离所以使用会更多
+    btn.onclick = function () {
+        alert("动态绑定成功")
+    }
+</script>
+</body>
+</html>
